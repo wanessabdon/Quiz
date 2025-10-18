@@ -1,0 +1,132 @@
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --primary: #0066cc;
+  --accent: #00a86b;
+  --text: #222;
+}
+
+*{box-sizing: border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container{
+  width: 100%;
+  max-width: 900px;
+}
+
+header{
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.card{
+  background: var(--card);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+
+.hidden{ display: none; }
+
+.subtitle{
+  color: #555;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+#progress{
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.options{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.option-btn{
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: linear-gradient(180deg,#f8fbff,#eef6ff);
+  transition: transform .12s ease, border-color .12s ease;
+  text-align: left;
+}
+
+.option-btn:hover{ transform: translateY(-2px); }
+.option-btn.selected{
+  border-color: var(--primary);
+  background: linear-gradient(180deg,#e6f0ff,#d7eaff);
+}
+
+.controls{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.small-btn{
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+.small-btn:disabled{
+  opacity:0.45;
+  cursor: not-allowed;
+}
+
+#start-screen input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+#start-btn, #restart-btn{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background: var(--accent);
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  margin-top:6px;
+}
+
+.bold{ font-weight:700; }
+
+.chart-wrap{
+  max-width:420px;
+  margin: 12px auto;
+}
+
+.credits{
+  margin-top:10px;
+  text-align:center;
+  color:#666;
+  font-size:0.9rem;
+}
+
+/* responsividade simples */
+@media (min-width:700px){
+  .options{ grid-template-columns: 1fr 1fr; }
+}

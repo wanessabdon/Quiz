@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz - 20 Perguntas</title>
+  <link rel="stylesheet" href="/estilo.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quiz: Desenvolvimento Web (20 perguntas)</h1>
+      <p class="subtitle">Exercício prático para demonstrar a estrutura do quiz</p>
+    </header>
+
+    <!-- Tela inicial: pedir nome -->
+    <div id="start-screen" class="card">
+      <label for="username">Digite seu nome:</label>
+      <input id="username" type="text" placeholder="Seu nome aqui" />
+      <button id="start-btn">Iniciar Quiz</button>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz" class="card hidden">
+      <div id="progress">Questão <span id="current">1</span> / <span id="total">20</span></div>
+
+      <h2 id="question-title"></h2>
+
+      <div id="options" class="options" role="list"></div>
+
+      <div class="controls">
+        <button id="prev-btn" class="small-btn" disabled>Anterior</button>
+        <button id="next-btn" class="small-btn" disabled>Próxima</button>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result-screen" class="card hidden">
+      <h2>Resultado de <span id="result-name"></span></h2>
+      <p id="score-summary"></p>
+      <p id="performance-message" class="bold"></p>
+
+      <div class="chart-wrap">
+        <canvas id="result-chart" width="300" height="300"></canvas>
+      </div>
+
+      <button id="restart-btn">Refazer Quiz</button>
+    </div>
+
+    <footer class="credits">
+      
+    </footer>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
